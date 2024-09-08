@@ -1,0 +1,30 @@
+[project]
+name = "spacy-lazy-docbin"
+version = "0.1.0"
+description = "Lazy-loadable and indexable spaCy DocBins"
+authors = [
+    { name = "woranov", email = "wor4nov+github@gmail.com" }
+]
+dependencies = [
+    "spacy>=3.7.6",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pip>=24.2",
+    "pytest>=8.3.2",
+    "pytest-cov>=5.0.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/spacy_lazy_docbin"]
