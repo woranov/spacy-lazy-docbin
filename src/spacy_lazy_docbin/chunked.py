@@ -1,11 +1,10 @@
 from pathlib import Path
-from typing import cast, Self, Sequence, TypedDict
-
-from spacy.tokens import Doc
-from spacy.vocab import Vocab
-from spacy.util import SimpleFrozenList
+from typing import Self, Sequence, TypedDict, cast
 
 import srsly
+from spacy.tokens import Doc
+from spacy.util import SimpleFrozenList
+from spacy.vocab import Vocab
 
 from spacy_lazy_docbin.base import PathLike
 from spacy_lazy_docbin.indexer import GroupedInnerAccessorMixin

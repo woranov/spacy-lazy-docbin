@@ -1,7 +1,8 @@
 from os import PathLike
 from pathlib import Path
+
+from spacy_lazy_docbin.base import BaseDocBin, DocBin
 from spacy_lazy_docbin.logging import logger
-from spacy_lazy_docbin.base import DocBin, BaseDocBin
 
 
 class LazyDocBin(DocBin):

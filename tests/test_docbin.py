@@ -1,4 +1,5 @@
 import spacy
+
 from spacy_lazy_docbin import DocBin
 
 

@@ -1,16 +1,16 @@
 import os
 from typing import Iterator, Self, Sequence, TypeVar, overload
 
-from spacy.attrs import ORTH
-from spacy.tokens import Doc, Span, DocBin as BaseDocBin
-from spacy.vocab import Vocab
-from spacy.tokens._dict_proxies import SpanGroups
 import srsly
+from spacy.attrs import ORTH
+from spacy.tokens import Doc, Span
+from spacy.tokens import DocBin as BaseDocBin
+from spacy.tokens._dict_proxies import SpanGroups
+from spacy.vocab import Vocab
 
 from spacy_lazy_docbin.indexer import _sanitize_index
 from spacy_lazy_docbin.sentence_view import SentenceView
 from spacy_lazy_docbin.utils import MISSING, Omittable
-
 
 PathLike = os.PathLike | str
 Sentence = TypeVar("Sentence", bound=Span)
