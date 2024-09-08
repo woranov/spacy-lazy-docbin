@@ -7,7 +7,8 @@ from spacy.vocab import Vocab
 from spacy.tokens._dict_proxies import SpanGroups
 import srsly
 
-from spacy_lazy_docbin.utils import MISSING, Omittable, _sanitize_index
+from spacy_lazy_docbin.indexer import _sanitize_index
+from spacy_lazy_docbin.utils import MISSING, Omittable
 
 
 PathLike = os.PathLike | str
