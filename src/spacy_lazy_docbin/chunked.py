@@ -10,6 +10,7 @@ import srsly
 from spacy_lazy_docbin.base import PathLike
 from spacy_lazy_docbin.indexer import GroupedInnerAccessorMixin
 from spacy_lazy_docbin.lazy import LazyDocBin
+from spacy_lazy_docbin.sentence_view import SentenceView
 from spacy_lazy_docbin.utils import docbin_sentence_counts
 
 
@@ -49,6 +50,7 @@ class DocBinChunks(GroupedInnerAccessorMixin[Doc]):
         self.docbins = list(docbins)
         self.num_padding = num_padding
         self.docbin_init_kwargs = docbin_init_kwargs
+        self.sentences = SentenceView(self)
 
     @property
     def data(self) -> Sequence[LazyDocBin]:

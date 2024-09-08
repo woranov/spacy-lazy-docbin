@@ -8,6 +8,7 @@ from spacy.tokens._dict_proxies import SpanGroups
 import srsly
 
 from spacy_lazy_docbin.indexer import _sanitize_index
+from spacy_lazy_docbin.sentence_view import SentenceView
 from spacy_lazy_docbin.utils import MISSING, Omittable
 
 
@@ -20,6 +21,7 @@ class DocBin(BaseDocBin, Sequence[Doc]):
         self.vocab = vocab
         super().__init__(*args, **kwargs)
         self._ensure_vocab_updated()
+        self.sentences = SentenceView(self)
 
     def add(self, doc: Doc):
         super().add(doc)
